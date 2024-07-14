@@ -1,38 +1,175 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #373a40;
+  --color: #507DBC;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  
+
+.first-page, #section1 {
+  background-color: #eeeeee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#section1 {
+  gap: 20px;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#section1 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
+#section1 h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+#section1 a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#section1 a:hover {
+  background-color: #046E8F;
+}
+
+#section1 img {
+  max-width: 90%;
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#section2, #section3 {
+  background-color: #eeeeee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  text-align: center;
+}
+
+#section2 .head2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#section2 .image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+#section2 .template {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#section2 .template:hover {
+  transform: scale(1.05);
+  border-color: #507DBC;
+}
+
+#section2 .img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#section3 .search-area {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #046E8F;
+  gap: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#section3 .search-area label {
+  font-size: 1.2rem;
+  font-weight: bold;
   color: white;
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#section3 .search-box {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#section3 .search-box:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#section3 .btn2 {
+  margin-top: 5px;
+  background-color: #373a40;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#section3 .btn2:hover {
+  background-color: #034078;
+}
+
+#section3 .meme-result {
+  margin-top: 20px;
+}
+
+#section3 .result-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 20px;
+}
+
+#section3 .meme-result img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
